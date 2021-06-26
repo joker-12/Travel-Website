@@ -1,0 +1,143 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+.header{
+    height: 95vh;
+    background-image:  linear-gradient(to right bottom ,rgba(126, 213, 111, 0.8) , rgba(40, 180, 133,0.8)), url(./Images/hero.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+}
+.logo-box{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+.logo{
+    height: 35px;
+    width: 35px;
+}
+.logo:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    height: 40px;
+    width: 40px;
+    position: absolute;
+}
+.heading{
+    position: absolute;
+    top: 27%;
+    left: 33%;
+    text-align: center;
+
+}
+.heading-main{
+    color: white;
+    display: block;
+    font-size: 57px;
+    font-weight: 300;
+    letter-spacing: 18px;
+    animation-name: moveleft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+.heading-sub{
+    color: white;
+    display: block;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 8px;
+    animation-name: moveright;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+.button:link,
+.button:visited{
+    text-decoration: none;
+    color: #777;
+    background-color: white;
+    display: inline-block;
+    padding: 12px;
+    margin-top: 50px;
+    border-radius: 100px;
+    position: relative;
+    
+}
+
+.button{
+    background-color: white;
+    display: inline-block;
+    animation-name: moveup;
+    animation-duration: 1.25s;
+    animation-timing-function: ease-in;
+}
+/*
+.btn{
+    animation-name: moveup;
+    -o-animation-duration: 0.5s;
+    animation-delay: 0.75s;
+    animation-timing-function: ease-out;
+}*/
+.button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.button:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+@keyframes moveup{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes moveleft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%{
+        opacity: 0.8;
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes moveright{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        opacity: 0.8;
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
