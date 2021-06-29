@@ -1,0 +1,158 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+$color-primary-main: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+$color-white: white;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #777;
+    padding: 3rem;
+}
+.header{
+    height: 95vh;
+    background-image:  linear-gradient(to right bottom ,rgba($color-primary-light, 0.8) , rgba($color-primary-dark, 0.8)), url(./Images/hero.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+}
+.logo-box{
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+}
+.logo{
+    height: 3.5rem;
+    width: 3.5rem;
+}
+.logo:hover{
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+}
+.heading{
+    position: absolute;
+    top: 27%;
+    left: 33%;
+    text-align: center;
+
+}
+.heading-main{
+    color: $color-white;
+    display: block;
+    font-size: 5.7rem;
+    font-weight: 300;
+    letter-spacing: 1.8rem;
+    animation-name: moveleft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+.heading-main:hover{
+    color: aqua;
+    transform: scale(1.05);
+}
+.heading-sub:hover{
+    color: aqua;
+    transform: scale(1.05);
+}
+.heading-sub{
+    color: $color-white;
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: .8rem;
+    animation-name: moveright;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+.button:link,
+.button:visited{
+    text-decoration: none;
+    color: #777;
+    background-color:$color-white;
+    display: inline-block;
+    padding: 1.2rem;
+    margin-top: 5rem;
+    border-radius: 10rem;
+    position: relative;
+    
+}
+
+.button{
+    background-color: $color-white;
+    display: inline-block;
+    animation-name: moveup;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+/*
+.btn{
+    animation-name: moveup;
+    -o-animation-duration: 0.5s;
+    animation-delay: 0.75s;
+    animation-timing-function: ease-out;
+}*/
+.button:hover{
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.button:active{
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+@keyframes moveup{
+    0%{
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes moveleft{
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80%{
+        opacity: 0.8;
+        transform: translateX(1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes moveright{
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80%{
+        opacity: 0.8;
+        transform: translateX(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
